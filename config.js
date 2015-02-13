@@ -10,7 +10,7 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'https://dmitrirabinowitz.com/',
+        url: 'http://dmitrirabinowitz.azurewebsites.net/',
         mail: {},
         database: {
             client: 'sqlite3',
@@ -25,15 +25,14 @@ config = {
             host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for azure set this to `process.env.PORT`
             port: process.env.PORT
-        },
-        forceAdminSSL: true
+        }
     },
 
     // ### Development **(default)**
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blogs published URL.
-        url: 'https://dmitrirabinowitz.com/',
+        url: 'http://dmitrirabinowitz.azurewebsites.net/',
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
