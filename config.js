@@ -1,7 +1,7 @@
 // # Ghost Configuration
 // Setup your Ghost install for various environments
 // Documentation can be found at http://support.ghost.org/config/
- 
+
 var path = require('path'),
     config;
 
@@ -10,7 +10,7 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://dmitrirabinowitz.azurewebsites.net/',
+        url: 'https://dmitrirabinowitz.azurewebsites.net/',
         mail: {},
         database: {
             client: 'sqlite3',
@@ -25,7 +25,8 @@ config = {
             host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for azure set this to `process.env.PORT`
             port: process.env.PORT
-        }
+        },
+        forceAdminSSL: true
     },
 
     // ### Development **(default)**
